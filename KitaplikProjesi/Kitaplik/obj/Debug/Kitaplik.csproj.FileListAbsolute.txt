@@ -1,0 +1,8 @@
+D:\C# Kursu\Kitaplik\Kitaplik\bin\Debug\Kitaplik.exe.config
+D:\C# Kursu\Kitaplik\Kitaplik\bin\Debug\Kitaplik.exe
+D:\C# Kursu\Kitaplik\Kitaplik\bin\Debug\Kitaplik.pdb
+D:\C# Kursu\Kitaplik\Kitaplik\obj\Debug\Kitaplik.csproj.AssemblyReference.cache
+D:\C# Kursu\Kitaplik\Kitaplik\obj\Debug\Kitaplik.csproj.SuggestedBindingRedirects.cache
+D:\C# Kursu\Kitaplik\Kitaplik\obj\Debug\Kitaplik.csproj.CoreCompileInputs.cache
+D:\C# Kursu\Kitaplik\Kitaplik\obj\Debug\Kitaplik.exe
+D:\C# Kursu\Kitaplik\Kitaplik\obj\Debug\Kitaplik.pdb
