@@ -1,0 +1,11 @@
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\bin\Debug\Dosya_islemleri.exe.config
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\bin\Debug\Dosya_islemleri.exe
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\bin\Debug\Dosya_islemleri.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.csproj.SuggestedBindingRedirects.cache
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.Form1.resources
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.Properties.Resources.resources
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.csproj.GenerateResource.cache
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.exe
+D:\github\C#_code_with_GelecegiYazanlar\Dosya_islemleri\Dosya_islemleri\obj\Debug\Dosya_islemleri.pdb

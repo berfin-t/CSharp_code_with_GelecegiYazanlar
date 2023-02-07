@@ -1,0 +1,13 @@
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\bin\Debug\Form_islemleri.exe.config
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\bin\Debug\Form_islemleri.exe
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\bin\Debug\Form_islemleri.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.csproj.SuggestedBindingRedirects.cache
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.Form1.resources
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.Form2.resources
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.Properties.Resources.resources
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.csproj.GenerateResource.cache
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.exe
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Form_islemleri\Form_islemleri\obj\Debug\Form_islemleri.Form3.resources
