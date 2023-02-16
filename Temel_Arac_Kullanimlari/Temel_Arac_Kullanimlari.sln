@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Temel_Arac_Kullanimlari", "Temel_Arac_Kullanimlari\Temel_Arac_Kullanimlari.csproj", "{9EF29E6C-64C4-4150-9C32-EFC7A8C9F634}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EF29E6C-64C4-4150-9C32-EFC7A8C9F634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EF29E6C-64C4-4150-9C32-EFC7A8C9F634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EF29E6C-64C4-4150-9C32-EFC7A8C9F634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EF29E6C-64C4-4150-9C32-EFC7A8C9F634}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37AB4119-6B3F-42D0-93BD-EADF8DEF52E3}
+	EndGlobalSection
+EndGlobal
