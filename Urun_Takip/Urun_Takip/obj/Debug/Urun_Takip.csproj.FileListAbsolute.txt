@@ -1,0 +1,16 @@
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.csproj.SuggestedBindingRedirects.cache
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmKategoriler.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.Properties.Resources.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.csproj.GenerateResource.cache
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\bin\Debug\Urun_Takip.exe.config
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\bin\Debug\Urun_Takip.exe
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\bin\Debug\Urun_Takip.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.exe
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmUrun.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmIstatistik.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmAdmin.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmGrafikler.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmYonlendirme.resources
