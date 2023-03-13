@@ -17,7 +17,7 @@ namespace Urun_Takip
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DbUrun;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection(@"Data Source=DESKTOP-NBHVRA9\SQLEXPRESS;Initial Catalog=DbUrun;Integrated Security=True");
         private void BtnListele_Click(object sender, EventArgs e)
         {
             SqlCommand cmd1 = new SqlCommand("Select UrunID,UrunAd,Stok,AlisFiyati,SatisFiyati,Ad,Kategori From TblUrunler Inner Join TblKategori On TblUrunler.Kategori=TblKategori.ID", baglanti);

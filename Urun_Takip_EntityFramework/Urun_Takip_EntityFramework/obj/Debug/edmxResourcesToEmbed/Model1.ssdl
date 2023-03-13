@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbUrunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DbUrun.dbo.TblAdmin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kullanici" Type="varchar" MaxLength="10" />
+    <Property Name="Sifre" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TblKategori">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TblMusteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Ad" Type="varchar" MaxLength="20" />
+    <Property Name="Soyad" Type="varchar" MaxLength="20" />
+    <Property Name="Sehir" Type="varchar" MaxLength="20" />
+    <Property Name="Bakiye" Type="decimal" Precision="18" Scale="2" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TblSatislar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Urun" Type="int" />
+    <Property Name="Musteri" Type="int" />
+    <Property Name="Adet" Type="tinyint" />
+    <Property Name="Fiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Toplam" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Tarih" Type="datetime" />
+  </EntityType>
+  <EntityType Name="TblUrunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAd" Type="varchar" MaxLength="30" />
+    <Property Name="Stok" Type="smallint" />
+    <Property Name="AlisFiyati" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SatisFiyati" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Kategori" Type="int" />
+  </EntityType>
+  <Association Name="FK_TblSatislar_TblMusteri">
+    <End Role="TblMusteri" Type="Self.TblMusteri" Multiplicity="0..1" />
+    <End Role="TblSatislar" Type="Self.TblSatislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblMusteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="TblSatislar">
+        <PropertyRef Name="Musteri" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblSatislar_TblUrunler">
+    <End Role="TblUrunler" Type="Self.TblUrunler" Multiplicity="0..1" />
+    <End Role="TblSatislar" Type="Self.TblSatislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblUrunler">
+        <PropertyRef Name="UrunID" />
+      </Principal>
+      <Dependent Role="TblSatislar">
+        <PropertyRef Name="Urun" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblUrunler_TblKategori">
+    <End Role="TblKategori" Type="Self.TblKategori" Multiplicity="0..1" />
+    <End Role="TblUrunler" Type="Self.TblUrunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblKategori">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TblUrunler">
+        <PropertyRef Name="Kategori" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbUrunModelStoreContainer">
+    <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblUrunler" EntityType="Self.TblUrunler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TblAdmin].[ID] AS [ID], 
+    [TblAdmin].[Kullanici] AS [Kullanici], 
+    [TblAdmin].[Sifre] AS [Sifre]
+    FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TblSatislar].[ID] AS [ID], 
+    [TblSatislar].[Urun] AS [Urun], 
+    [TblSatislar].[Musteri] AS [Musteri], 
+    [TblSatislar].[Adet] AS [Adet], 
+    [TblSatislar].[Fiyat] AS [Fiyat], 
+    [TblSatislar].[Toplam] AS [Toplam], 
+    [TblSatislar].[Tarih] AS [Tarih]
+    FROM [dbo].[TblSatislar] AS [TblSatislar]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_TblSatislar_TblMusteri" Association="Self.FK_TblSatislar_TblMusteri">
+      <End Role="TblMusteri" EntitySet="TblMusteri" />
+      <End Role="TblSatislar" EntitySet="TblSatislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblSatislar_TblUrunler" Association="Self.FK_TblSatislar_TblUrunler">
+      <End Role="TblUrunler" EntitySet="TblUrunler" />
+      <End Role="TblSatislar" EntitySet="TblSatislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblUrunler_TblKategori" Association="Self.FK_TblUrunler_TblKategori">
+      <End Role="TblKategori" EntitySet="TblKategori" />
+      <End Role="TblUrunler" EntitySet="TblUrunler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -14,3 +14,5 @@ D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Tak
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmAdmin.resources
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmGrafikler.resources
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmYonlendirme.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmMusteri.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip\Urun_Takip\obj\Debug\Urun_Takip.FrmSatislar.resources

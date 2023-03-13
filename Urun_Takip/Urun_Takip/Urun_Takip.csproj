@@ -47,10 +47,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DbUrunDataSet.Designer.cs">
+    <Compile Include="DataSet4xsd.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DbUrunDataSet.xsd</DependentUpon>
+      <DependentUpon>DataSet4xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbUrun.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DbUrun.xsd</DependentUpon>
     </Compile>
     <Compile Include="FrmKategoriler.cs">
       <SubType>Form</SubType>
@@ -75,6 +80,18 @@
     </Compile>
     <Compile Include="FrmIstatistik.Designer.cs">
       <DependentUpon>FrmIstatistik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMusteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMusteri.Designer.cs">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSatislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSatislar.Designer.cs">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUrun.cs">
       <SubType>Form</SubType>
@@ -102,6 +119,12 @@
     <EmbeddedResource Include="FrmIstatistik.resx">
       <DependentUpon>FrmIstatistik.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMusteri.resx">
+      <DependentUpon>FrmMusteri.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSatislar.resx">
+      <DependentUpon>FrmSatislar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUrun.resx">
       <DependentUpon>FrmUrun.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,16 +140,27 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DbUrunDataSet.xsc">
-      <DependentUpon>DbUrunDataSet.xsd</DependentUpon>
+    <None Include="DataSet4.xsc">
+      <DependentUpon>DataSet4xsd</DependentUpon>
     </None>
-    <None Include="DbUrunDataSet.xsd">
+    <None Include="DataSet4xsd">
+      <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DbUrunDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DataSet4xsd.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet4.xss">
+      <DependentUpon>DataSet4xsd</DependentUpon>
+    </None>
+    <None Include="DbUrun.xsc">
+      <DependentUpon>DbUrun.xsd</DependentUpon>
+    </None>
+    <None Include="DbUrun.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DbUrun.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DbUrunDataSet.xss">
-      <DependentUpon>DbUrunDataSet.xsd</DependentUpon>
+    <None Include="DbUrun.xss">
+      <DependentUpon>DbUrun.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
