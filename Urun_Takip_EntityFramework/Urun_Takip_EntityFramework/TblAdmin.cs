@@ -14,7 +14,7 @@ namespace Urun_Takip_EntityFramework
     
     public partial class TblAdmin
     {
-        public byte ID { get; set; }
+        public int ID { get; set; }
         public string Kullanici { get; set; }
         public string Sifre { get; set; }
     }

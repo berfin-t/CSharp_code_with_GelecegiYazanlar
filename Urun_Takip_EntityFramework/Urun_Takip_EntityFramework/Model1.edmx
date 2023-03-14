@@ -11,16 +11,16 @@ warning 6002: The table/view 'DbUrun.dbo.TblAdmin' does not have a primary key d
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Kullanici" Type="varchar" MaxLength="10" />
-          <Property Name="Sifre" Type="varchar" MaxLength="10" />
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Kullanici" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TblKategori">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Ad" Type="varchar" MaxLength="30" />
+          <Property Name="Ad" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TblMusteri">
           <Key>
@@ -32,8 +32,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblAdmin' does not have a primary key d
           <Property Name="Sehir" Type="varchar" MaxLength="20" />
           <Property Name="Bakiye" Type="decimal" Precision="18" Scale="2" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="TblSatislar">
           <Key>
             <PropertyRef Name="ID" />
@@ -48,13 +46,13 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
         </EntityType>
         <EntityType Name="TblUrunler">
           <Key>
-            <PropertyRef Name="UrunID" />
+            <PropertyRef Name="UrunId" />
           </Key>
-          <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="UrunAd" Type="varchar" MaxLength="30" />
+          <Property Name="UrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UrunAd" Type="varchar" MaxLength="50" />
           <Property Name="Stok" Type="smallint" />
-          <Property Name="AlisFiyati" Type="decimal" Precision="18" Scale="2" />
-          <Property Name="SatisFiyati" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="AlisFiyat" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="SatisFiyat" Type="decimal" Precision="18" Scale="2" />
           <Property Name="Kategori" Type="int" />
         </EntityType>
         <Association Name="FK_TblSatislar_TblMusteri">
@@ -74,7 +72,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
           <End Role="TblSatislar" Type="Self.TblSatislar" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TblUrunler">
-              <PropertyRef Name="UrunID" />
+              <PropertyRef Name="UrunId" />
             </Principal>
             <Dependent Role="TblSatislar">
               <PropertyRef Name="Urun" />
@@ -96,6 +94,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
         <EntityContainer Name="DbUrunModelStoreContainer">
           <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblUrunler" EntityType="Self.TblUrunler" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -103,17 +102,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
     [TblAdmin].[Kullanici] AS [Kullanici], 
     [TblAdmin].[Sifre] AS [Sifre]
     FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [TblSatislar].[ID] AS [ID], 
-    [TblSatislar].[Urun] AS [Urun], 
-    [TblSatislar].[Musteri] AS [Musteri], 
-    [TblSatislar].[Adet] AS [Adet], 
-    [TblSatislar].[Fiyat] AS [Fiyat], 
-    [TblSatislar].[Toplam] AS [Toplam], 
-    [TblSatislar].[Tarih] AS [Tarih]
-    FROM [dbo].[TblSatislar] AS [TblSatislar]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_TblSatislar_TblMusteri" Association="Self.FK_TblSatislar_TblMusteri">
             <End Role="TblMusteri" EntitySet="TblMusteri" />
@@ -138,7 +126,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Ad" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TblUrunler" Relationship="Self.FK_TblUrunler_TblKategori" FromRole="TblKategori" ToRole="TblUrunler" />
         </EntityType>
         <EntityType Name="TblMusteri">
@@ -151,27 +139,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
           <Property Name="Sehir" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="Bakiye" Type="Decimal" Precision="18" Scale="2" />
           <NavigationProperty Name="TblSatislar" Relationship="Self.FK_TblSatislar_TblMusteri" FromRole="TblMusteri" ToRole="TblSatislar" />
-        </EntityType>
-        <EntityType Name="TblUrunler">
-          <Key>
-            <PropertyRef Name="UrunID" />
-          </Key>
-          <Property Name="UrunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UrunAd" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="Stok" Type="Int16" />
-          <Property Name="AlisFiyati" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="SatisFiyati" Type="Decimal" Precision="18" Scale="2" />
-          <Property Name="Kategori" Type="Int32" />
-          <NavigationProperty Name="TblKategori" Relationship="Self.FK_TblUrunler_TblKategori" FromRole="TblUrunler" ToRole="TblKategori" />
-          <NavigationProperty Name="TblSatislar" Relationship="Self.FK_TblSatislar_TblUrunler" FromRole="TblUrunler" ToRole="TblSatislar" />
-        </EntityType>
-        <EntityType Name="TblAdmin">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Kullanici" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
-          <Property Name="Sifre" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="TblSatislar">
           <Key>
@@ -186,6 +153,27 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
           <Property Name="Tarih" Type="DateTime" Precision="3" />
           <NavigationProperty Name="TblMusteri" Relationship="Self.FK_TblSatislar_TblMusteri" FromRole="TblSatislar" ToRole="TblMusteri" />
           <NavigationProperty Name="TblUrunler" Relationship="Self.FK_TblSatislar_TblUrunler" FromRole="TblSatislar" ToRole="TblUrunler" />
+        </EntityType>
+        <EntityType Name="TblUrunler">
+          <Key>
+            <PropertyRef Name="UrunId" />
+          </Key>
+          <Property Name="UrunId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Stok" Type="Int16" />
+          <Property Name="AlisFiyat" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="SatisFiyat" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Kategori" Type="Int32" />
+          <NavigationProperty Name="TblKategori" Relationship="Self.FK_TblUrunler_TblKategori" FromRole="TblUrunler" ToRole="TblKategori" />
+          <NavigationProperty Name="TblSatislar" Relationship="Self.FK_TblSatislar_TblUrunler" FromRole="TblUrunler" ToRole="TblSatislar" />
+        </EntityType>
+        <EntityType Name="TblAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
         <Association Name="FK_TblUrunler_TblKategori">
           <End Role="TblKategori" Type="Self.TblKategori" Multiplicity="0..1" />
@@ -216,7 +204,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
           <End Role="TblSatislar" Type="Self.TblSatislar" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TblUrunler">
-              <PropertyRef Name="UrunID" />
+              <PropertyRef Name="UrunId" />
             </Principal>
             <Dependent Role="TblSatislar">
               <PropertyRef Name="Urun" />
@@ -226,9 +214,9 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
         <EntityContainer Name="DbUrunEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="TblKategori" EntityType="Self.TblKategori" />
           <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" />
+          <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" />
           <EntitySet Name="TblUrunler" EntityType="Self.TblUrunler" />
           <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" />
-          <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" />
           <AssociationSet Name="FK_TblUrunler_TblKategori" Association="Self.FK_TblUrunler_TblKategori">
             <End Role="TblKategori" EntitySet="TblKategori" />
             <End Role="TblUrunler" EntitySet="TblUrunler" />
@@ -267,27 +255,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TblUrunler">
-            <EntityTypeMapping TypeName="DbUrunModel.TblUrunler">
-              <MappingFragment StoreEntitySet="TblUrunler">
-                <ScalarProperty Name="UrunID" ColumnName="UrunID" />
-                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
-                <ScalarProperty Name="Stok" ColumnName="Stok" />
-                <ScalarProperty Name="AlisFiyati" ColumnName="AlisFiyati" />
-                <ScalarProperty Name="SatisFiyati" ColumnName="SatisFiyati" />
-                <ScalarProperty Name="Kategori" ColumnName="Kategori" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="TblAdmin">
-            <EntityTypeMapping TypeName="DbUrunModel.TblAdmin">
-              <MappingFragment StoreEntitySet="TblAdmin">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
-                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="TblSatislar">
             <EntityTypeMapping TypeName="DbUrunModel.TblSatislar">
               <MappingFragment StoreEntitySet="TblSatislar">
@@ -298,6 +265,27 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
                 <ScalarProperty Name="Fiyat" ColumnName="Fiyat" />
                 <ScalarProperty Name="Toplam" ColumnName="Toplam" />
                 <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblUrunler">
+            <EntityTypeMapping TypeName="DbUrunModel.TblUrunler">
+              <MappingFragment StoreEntitySet="TblUrunler">
+                <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+                <ScalarProperty Name="Stok" ColumnName="Stok" />
+                <ScalarProperty Name="AlisFiyat" ColumnName="AlisFiyat" />
+                <ScalarProperty Name="SatisFiyat" ColumnName="SatisFiyat" />
+                <ScalarProperty Name="Kategori" ColumnName="Kategori" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TblAdmin">
+            <EntityTypeMapping TypeName="DbUrunModel.TblAdmin">
+              <MappingFragment StoreEntitySet="TblAdmin">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

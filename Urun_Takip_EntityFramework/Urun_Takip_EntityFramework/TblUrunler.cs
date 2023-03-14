@@ -20,11 +20,11 @@ namespace Urun_Takip_EntityFramework
             this.TblSatislar = new HashSet<TblSatislar>();
         }
     
-        public int UrunID { get; set; }
+        public int UrunId { get; set; }
         public string UrunAd { get; set; }
         public Nullable<short> Stok { get; set; }
-        public Nullable<decimal> AlisFiyati { get; set; }
-        public Nullable<decimal> SatisFiyati { get; set; }
+        public Nullable<decimal> AlisFiyat { get; set; }
+        public Nullable<decimal> SatisFiyat { get; set; }
         public Nullable<int> Kategori { get; set; }
     
         public virtual TblKategori TblKategori { get; set; }

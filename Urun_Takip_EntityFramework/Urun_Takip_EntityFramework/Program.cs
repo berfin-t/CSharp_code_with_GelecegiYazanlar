@@ -16,7 +16,7 @@ namespace Urun_Takip_EntityFramework
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmUrunler());
+            Application.Run(new Form1());
         }
     }
 }

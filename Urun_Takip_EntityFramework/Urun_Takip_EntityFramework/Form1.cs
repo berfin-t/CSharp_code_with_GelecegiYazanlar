@@ -16,7 +16,7 @@ namespace Urun_Takip_EntityFramework
         {
             InitializeComponent();
         }
-        DbUrunEntities db=new DbUrunEntities();
+        DbUrunEntities db = new DbUrunEntities();
         private void BtnListele_Click(object sender, EventArgs e)
         {
             //dataGridView1.DataSource = db.TblMusteri.ToList();                                                                                                                                                                                                                                        

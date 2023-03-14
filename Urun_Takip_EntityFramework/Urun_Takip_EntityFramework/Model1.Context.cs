@@ -27,8 +27,8 @@ namespace Urun_Takip_EntityFramework
     
         public virtual DbSet<TblKategori> TblKategori { get; set; }
         public virtual DbSet<TblMusteri> TblMusteri { get; set; }
+        public virtual DbSet<TblSatislar> TblSatislar { get; set; }
         public virtual DbSet<TblUrunler> TblUrunler { get; set; }
         public virtual DbSet<TblAdmin> TblAdmin { get; set; }
-        public virtual DbSet<TblSatislar> TblSatislar { get; set; }
     }
 }

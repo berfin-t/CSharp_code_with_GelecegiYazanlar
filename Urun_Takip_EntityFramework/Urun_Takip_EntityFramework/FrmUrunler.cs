@@ -24,11 +24,11 @@ namespace Urun_Takip_EntityFramework
             var urunler = from x in db.TblUrunler
                           select new
                           {
-                              x.UrunID,
+                              x.UrunId,
                               x.UrunAd,
                               x.Stok,
-                              x.AlisFiyati,
-                              x.SatisFiyati,
+                              x.AlisFiyat,
+                              x.SatisFiyat,
                               x.TblKategori.Ad
                           };
             dataGridView1.DataSource = urunler.ToList();

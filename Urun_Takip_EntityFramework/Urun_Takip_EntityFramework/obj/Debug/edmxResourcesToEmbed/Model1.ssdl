@@ -6,16 +6,16 @@ warning 6002: The table/view 'DbUrun.dbo.TblAdmin' does not have a primary key d
     <Key>
       <PropertyRef Name="ID" />
     </Key>
-    <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Kullanici" Type="varchar" MaxLength="10" />
-    <Property Name="Sifre" Type="varchar" MaxLength="10" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kullanici" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TblKategori">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Ad" Type="varchar" MaxLength="30" />
+    <Property Name="Ad" Type="varchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="TblMusteri">
     <Key>
@@ -27,8 +27,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblAdmin' does not have a primary key d
     <Property Name="Sehir" Type="varchar" MaxLength="20" />
     <Property Name="Bakiye" Type="decimal" Precision="18" Scale="2" />
   </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="TblSatislar">
     <Key>
       <PropertyRef Name="ID" />
@@ -43,13 +41,13 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
   </EntityType>
   <EntityType Name="TblUrunler">
     <Key>
-      <PropertyRef Name="UrunID" />
+      <PropertyRef Name="UrunId" />
     </Key>
-    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UrunAd" Type="varchar" MaxLength="30" />
+    <Property Name="UrunId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAd" Type="varchar" MaxLength="50" />
     <Property Name="Stok" Type="smallint" />
-    <Property Name="AlisFiyati" Type="decimal" Precision="18" Scale="2" />
-    <Property Name="SatisFiyati" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="AlisFiyat" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="SatisFiyat" Type="decimal" Precision="18" Scale="2" />
     <Property Name="Kategori" Type="int" />
   </EntityType>
   <Association Name="FK_TblSatislar_TblMusteri">
@@ -69,7 +67,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
     <End Role="TblSatislar" Type="Self.TblSatislar" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TblUrunler">
-        <PropertyRef Name="UrunID" />
+        <PropertyRef Name="UrunId" />
       </Principal>
       <Dependent Role="TblSatislar">
         <PropertyRef Name="Urun" />
@@ -91,6 +89,7 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
   <EntityContainer Name="DbUrunModelStoreContainer">
     <EntitySet Name="TblKategori" EntityType="Self.TblKategori" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblMusteri" EntityType="Self.TblMusteri" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblUrunler" EntityType="Self.TblUrunler" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="TblAdmin" EntityType="Self.TblAdmin" store:Type="Tables" store:Schema="dbo">
       <DefiningQuery>SELECT 
@@ -98,17 +97,6 @@ warning 6002: The table/view 'DbUrun.dbo.TblSatislar' does not have a primary ke
     [TblAdmin].[Kullanici] AS [Kullanici], 
     [TblAdmin].[Sifre] AS [Sifre]
     FROM [dbo].[TblAdmin] AS [TblAdmin]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="TblSatislar" EntityType="Self.TblSatislar" store:Type="Tables" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [TblSatislar].[ID] AS [ID], 
-    [TblSatislar].[Urun] AS [Urun], 
-    [TblSatislar].[Musteri] AS [Musteri], 
-    [TblSatislar].[Adet] AS [Adet], 
-    [TblSatislar].[Fiyat] AS [Fiyat], 
-    [TblSatislar].[Toplam] AS [Toplam], 
-    [TblSatislar].[Tarih] AS [Tarih]
-    FROM [dbo].[TblSatislar] AS [TblSatislar]</DefiningQuery>
     </EntitySet>
     <AssociationSet Name="FK_TblSatislar_TblMusteri" Association="Self.FK_TblSatislar_TblMusteri">
       <End Role="TblMusteri" EntitySet="TblMusteri" />
