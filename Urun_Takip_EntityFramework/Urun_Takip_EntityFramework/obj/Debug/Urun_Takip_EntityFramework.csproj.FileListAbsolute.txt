@@ -15,3 +15,4 @@ D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip_EntityFramework\Urun_Takip_En
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip_EntityFramework\Urun_Takip_EntityFramework\obj\Debug\Urun_Takip_EntityFramework.exe
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip_EntityFramework\Urun_Takip_EntityFramework\obj\Debug\Urun_Takip_EntityFramework.pdb
 D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip_EntityFramework\Urun_Takip_EntityFramework\obj\Debug\Urun_Takip_EntityFramework.FrmUrunler.resources
+D:\github\C#_code_with_GelecegiYazanlar\Urun_Takip_EntityFramework\Urun_Takip_EntityFramework\obj\Debug\Urun_Takip_EntityFramework.FrmIstatistik.resources

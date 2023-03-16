@@ -51,32 +51,35 @@
             // BtnGuncelle
             // 
             this.BtnGuncelle.Location = new System.Drawing.Point(919, 397);
-            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnGuncelle.Margin = new System.Windows.Forms.Padding(4);
             this.BtnGuncelle.Name = "BtnGuncelle";
             this.BtnGuncelle.Size = new System.Drawing.Size(164, 37);
             this.BtnGuncelle.TabIndex = 30;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
             this.BtnSil.Location = new System.Drawing.Point(919, 346);
-            this.BtnSil.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnSil.Margin = new System.Windows.Forms.Padding(4);
             this.BtnSil.Name = "BtnSil";
             this.BtnSil.Size = new System.Drawing.Size(164, 43);
             this.BtnSil.TabIndex = 29;
             this.BtnSil.Text = "Sil";
             this.BtnSil.UseVisualStyleBackColor = true;
+            this.BtnSil.Click += new System.EventHandler(this.BtnSil_Click);
             // 
             // BtnKaydet
             // 
             this.BtnKaydet.Location = new System.Drawing.Point(919, 296);
-            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnKaydet.Margin = new System.Windows.Forms.Padding(4);
             this.BtnKaydet.Name = "BtnKaydet";
             this.BtnKaydet.Size = new System.Drawing.Size(164, 42);
             this.BtnKaydet.TabIndex = 28;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
             // label1
             // 
@@ -91,7 +94,7 @@
             // TxtSatisFiyati
             // 
             this.TxtSatisFiyati.Location = new System.Drawing.Point(919, 160);
-            this.TxtSatisFiyati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtSatisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.TxtSatisFiyati.Name = "TxtSatisFiyati";
             this.TxtSatisFiyati.Size = new System.Drawing.Size(175, 28);
             this.TxtSatisFiyati.TabIndex = 26;
@@ -109,7 +112,7 @@
             // TxtAlisFiyati
             // 
             this.TxtAlisFiyati.Location = new System.Drawing.Point(919, 124);
-            this.TxtAlisFiyati.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtAlisFiyati.Margin = new System.Windows.Forms.Padding(4);
             this.TxtAlisFiyati.Name = "TxtAlisFiyati";
             this.TxtAlisFiyati.Size = new System.Drawing.Size(175, 28);
             this.TxtAlisFiyati.TabIndex = 24;
@@ -127,7 +130,7 @@
             // TxtStok
             // 
             this.TxtStok.Location = new System.Drawing.Point(919, 88);
-            this.TxtStok.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtStok.Margin = new System.Windows.Forms.Padding(4);
             this.TxtStok.Name = "TxtStok";
             this.TxtStok.Size = new System.Drawing.Size(175, 28);
             this.TxtStok.TabIndex = 22;
@@ -145,7 +148,7 @@
             // TxtUrunAd
             // 
             this.TxtUrunAd.Location = new System.Drawing.Point(919, 49);
-            this.TxtUrunAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtUrunAd.Margin = new System.Windows.Forms.Padding(4);
             this.TxtUrunAd.Name = "TxtUrunAd";
             this.TxtUrunAd.Size = new System.Drawing.Size(175, 28);
             this.TxtUrunAd.TabIndex = 20;
@@ -163,7 +166,7 @@
             // BtnListele
             // 
             this.BtnListele.Location = new System.Drawing.Point(919, 246);
-            this.BtnListele.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BtnListele.Margin = new System.Windows.Forms.Padding(4);
             this.BtnListele.Name = "BtnListele";
             this.BtnListele.Size = new System.Drawing.Size(164, 42);
             this.BtnListele.TabIndex = 18;
@@ -174,7 +177,7 @@
             // TxtId
             // 
             this.TxtId.Location = new System.Drawing.Point(919, 13);
-            this.TxtId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtId.Margin = new System.Windows.Forms.Padding(4);
             this.TxtId.Name = "TxtId";
             this.TxtId.Size = new System.Drawing.Size(175, 28);
             this.TxtId.TabIndex = 17;
@@ -184,12 +187,14 @@
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(8, 13);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(789, 508);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             // 
             // label6
             // 
@@ -233,7 +238,7 @@
             this.Controls.Add(this.TxtId);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmUrunler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmUrunler";
