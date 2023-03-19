@@ -1,0 +1,9 @@
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\bin\Debug\EntityLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\bin\Debug\EntityLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

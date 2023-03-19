@@ -1,0 +1,6 @@
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\bin\Debug\EntityLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\bin\Debug\EntityLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\obj\Debug\EntityLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\EntityLayer\obj\Debug\EntityLayer.pdb

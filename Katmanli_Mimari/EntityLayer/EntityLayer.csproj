@@ -41,9 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ders.cs" />
-    <Compile Include="notlar.cs" />
-    <Compile Include="ogrenci.cs" />
+    <Compile Include="EntityDers.cs" />
+    <Compile Include="EntityNotlar.cs" />
+    <Compile Include="EntityOgrenci.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

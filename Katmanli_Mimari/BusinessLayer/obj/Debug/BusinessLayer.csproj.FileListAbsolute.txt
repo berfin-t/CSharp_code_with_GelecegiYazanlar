@@ -1,0 +1,11 @@
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\DataAccessLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\EntityLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\bin\Debug\EntityLayer.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\BusinessLayer\obj\Debug\BusinessLayer.pdb

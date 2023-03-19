@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EntityLayer
 {
-    public class ogrenci
+    public class EntityOgrenci
     {
         public int OgrenciID { get; set; }
         public string Ad { get; set; }
