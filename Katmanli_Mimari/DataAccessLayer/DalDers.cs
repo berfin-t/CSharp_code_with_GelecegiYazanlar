@@ -24,5 +24,24 @@ namespace DataAccessLayer
             cmd1.Parameters.AddWithValue("@p1", p.DersAd);
             return cmd1.ExecuteNonQuery();
         }
+        public static List<EntityDers> DersListesi()
+        {
+            List<EntityDers> dersler=new List<EntityDers>();
+            SqlCommand cmd2 = new SqlCommand("Select * Form TblDersler", Baglanti.bgl);
+            if(cmd2.Connection.State!=ConnectionState.Open)
+            {
+                cmd2.Connection.Open();
+            }
+            SqlDataReader dr=cmd2.ExecuteReader();
+            while(dr.Read())
+            {
+                EntityDers ent = new EntityDers();
+                ent.DersID = byte.Parse(dr["DersID"].ToString());
+                ent.DersAd= dr["DersAd"].ToString();
+                dersler.Add(ent);
+            }
+            dr.Close();
+            return dersler;
+        }
     }
 }

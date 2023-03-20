@@ -13,9 +13,9 @@ using BusinessLayer;
 
 namespace Katmanli_Mimari
 {
-    public partial class Form1 : Form
+    public partial class FrmDers : Form
     {
-        public Form1()
+        public FrmDers()
         {
             InitializeComponent();
         }
