@@ -9,10 +9,11 @@ D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\bin\Debu
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\bin\Debug\EntityLayer.pdb
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.csproj.AssemblyReference.cache
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.csproj.SuggestedBindingRedirects.cache
-D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.Form1.resources
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.Properties.Resources.resources
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.csproj.GenerateResource.cache
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.csproj.CoreCompileInputs.cache
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.csproj.CopyComplete
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.exe
 D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.FrmDers.resources
+D:\github\C#_code_with_GelecegiYazanlar\Katmanli_Mimari\Katmanli_Mimari\obj\Debug\Katmanli_Mimari.FrmOgrenci.resources

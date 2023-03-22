@@ -19,5 +19,28 @@ namespace BusinessLayer
             return -1;
             
         }
+        public static List<EntityDers> DersListesiBL()
+        {
+            return DalDers.DersListesi();
+        }
+        public static int DersSilBL(byte p)
+        {
+            if(p<=1)
+            {
+                return DalDers.DersSil(p);
+            }
+            else
+            {
+                return -1;
+            }
+        }
+        public static int DersGuncelleBL(EntityDers p)
+        {
+            if(p.DersAd!="" && p.DersAd.Length>=3 && p.DersAd.Length<=30 && p.DersID>=1)
+            {
+                return DalDers.DersGuncelle(p);
+            }
+            return -1;
+        }
     }
 }

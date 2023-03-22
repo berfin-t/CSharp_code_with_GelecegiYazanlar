@@ -26,5 +26,28 @@ namespace Katmanli_Mimari
             ent.DersAd = TxtAd.Text;
             BLDers.DersEkleBL(ent);
         }
+
+        private void BtnListele_Click(object sender, EventArgs e)
+        {
+            List<EntityDers> ders = BLDers.DersListesiBL();
+            dataGridView1.DataSource = ders;
+        }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            EntityDers ent = new EntityDers();
+            ent.DersAd= TxtAd.Text;
+            ent.DersID= byte.Parse(TxtId.Text);
+            BLDers.DersGuncelleBL(ent);
+        }
+
+        private void BtnSil_Click(object sender, EventArgs e)
+        {
+            byte deger;
+            deger = byte.Parse(TxtId.Text);
+            EntityDers d = new EntityDers();
+            d.DersID = byte.Parse(deger.ToString());
+            BLDers.DersSilBL(d.DersID);
+        }
     }
 }

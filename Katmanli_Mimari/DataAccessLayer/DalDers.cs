@@ -43,5 +43,28 @@ namespace DataAccessLayer
             dr.Close();
             return dersler;
         }
+        public static int DersSil(byte p)
+        {
+            SqlCommand cmd3 = new SqlCommand("Delete From TblDersler where DersID=@p1", Baglanti.bgl);
+            if (cmd3.Connection.State!=ConnectionState.Open)
+            {
+                cmd3.Connection.Open();
+            }
+            cmd3.Parameters.AddWithValue("@p1", p);
+            return cmd3.ExecuteNonQuery();
+
+        }
+        public static int DersGuncelle(EntityDers p)
+        {
+            SqlCommand cmd4 = new SqlCommand("Update TblDersler set DersAd=@p1 where DersID=@p2",Baglanti.bgl);
+            if (cmd4.Connection.State!=ConnectionState.Open)
+            {
+                cmd4.Connection.Open();
+            }
+            cmd4.Parameters.AddWithValue("@p1", p.DersAd);
+            cmd4.Parameters.AddWithValue("@p2",p.DersID); 
+            return cmd4.ExecuteNonQuery();
+
+        }
     }
 }
