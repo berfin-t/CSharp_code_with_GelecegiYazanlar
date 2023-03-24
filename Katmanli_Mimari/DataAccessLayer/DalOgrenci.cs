@@ -68,5 +68,20 @@ namespace DataAccessLayer
             cmd4.Parameters.AddWithValue("@p2", p.DersID);
             return cmd4.ExecuteNonQuery();
         }
+        public static int OgrenciGuncelle(EntityOgrenci p)
+        {
+            SqlCommand cmd4 = new SqlCommand("Update TblOgrenci set Ad=@p1, Soyad=@p2, Numara=@p3, Bolum=@p4 Where OgrenciID=@p5", Baglanti.bgl);
+            if (cmd4.Connection.State != ConnectionState.Open) 
+            {
+                cmd4.Connection.Open(); 
+            }
+            cmd4.Parameters.AddWithValue("@p1", p.Ad);
+            cmd4.Parameters.AddWithValue("@p2", p.Soyad);
+            cmd4.Parameters.AddWithValue("@p3", p.Numara);
+            cmd4.Parameters.AddWithValue("@p4", p.Bölüm);
+            cmd4.Parameters.AddWithValue("@p5", p.OgrenciID);
+            return cmd4.ExecuteNonQuery();
+        }
+    
     }
 }

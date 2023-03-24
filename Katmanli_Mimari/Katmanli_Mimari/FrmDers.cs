@@ -47,7 +47,7 @@ namespace Katmanli_Mimari
             deger = byte.Parse(TxtId.Text);
             EntityDers d = new EntityDers();
             d.DersID = byte.Parse(deger.ToString());
-            BLDers.DersSilBL(d.DersID);
+            BLDers.DersSilBL((byte)d.DersID);
         }
     }
 }

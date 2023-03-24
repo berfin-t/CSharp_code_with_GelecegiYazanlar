@@ -41,11 +41,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.MTxtNumaraAra = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.MTxtNumara = new System.Windows.Forms.MaskedTextBox();
+            this.TxtSoyad = new System.Windows.Forms.TextBox();
+            this.TxtBolum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.BtnGuncelle.TabIndex = 16;
             this.BtnGuncelle.Text = "Güncelle";
             this.BtnGuncelle.UseVisualStyleBackColor = true;
+            this.BtnGuncelle.Click += new System.EventHandler(this.BtnGuncelle_Click);
             // 
             // BtnSil
             // 
@@ -164,12 +165,12 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Bölüm:";
             // 
-            // maskedTextBox1
+            // MTxtNumaraAra
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(96, 5);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(207, 28);
-            this.maskedTextBox1.TabIndex = 23;
+            this.MTxtNumaraAra.Location = new System.Drawing.Point(96, 5);
+            this.MTxtNumaraAra.Name = "MTxtNumaraAra";
+            this.MTxtNumaraAra.Size = new System.Drawing.Size(207, 28);
+            this.MTxtNumaraAra.TabIndex = 23;
             // 
             // button1
             // 
@@ -180,37 +181,37 @@
             this.button1.Text = "Ara";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox2
+            // MTxtNumara
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(589, 113);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(181, 28);
-            this.maskedTextBox2.TabIndex = 25;
+            this.MTxtNumara.Location = new System.Drawing.Point(589, 113);
+            this.MTxtNumara.Name = "MTxtNumara";
+            this.MTxtNumara.Size = new System.Drawing.Size(181, 28);
+            this.MTxtNumara.TabIndex = 25;
             // 
-            // textBox1
+            // TxtSoyad
             // 
-            this.textBox1.Location = new System.Drawing.Point(589, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 28);
-            this.textBox1.TabIndex = 26;
+            this.TxtSoyad.Location = new System.Drawing.Point(589, 79);
+            this.TxtSoyad.Name = "TxtSoyad";
+            this.TxtSoyad.Size = new System.Drawing.Size(181, 28);
+            this.TxtSoyad.TabIndex = 26;
             // 
-            // textBox2
+            // TxtBolum
             // 
-            this.textBox2.Location = new System.Drawing.Point(589, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 28);
-            this.textBox2.TabIndex = 27;
+            this.TxtBolum.Location = new System.Drawing.Point(589, 147);
+            this.TxtBolum.Name = "TxtBolum";
+            this.TxtBolum.Size = new System.Drawing.Size(181, 28);
+            this.TxtBolum.TabIndex = 27;
             // 
             // FrmOgrenci
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 356);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.TxtBolum);
+            this.Controls.Add(this.TxtSoyad);
+            this.Controls.Add(this.MTxtNumara);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.MTxtNumaraAra);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -227,7 +228,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmOgrenci";
-            this.Text = "Form1";
+            this.Text = "FrmOgrenci";
             this.Load += new System.EventHandler(this.FrmOgrenci_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -250,10 +251,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox MTxtNumaraAra;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.MaskedTextBox MTxtNumara;
+        private System.Windows.Forms.TextBox TxtSoyad;
+        private System.Windows.Forms.TextBox TxtBolum;
     }
 }

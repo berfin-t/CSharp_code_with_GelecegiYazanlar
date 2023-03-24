@@ -34,5 +34,14 @@ namespace BusinessLayer
                 return -1;
             }
         }
+        public static int OgrenciGuncelleBL(EntityOgrenci p)
+        {
+            if(p.Ad!=null && p.Soyad!="" && p.Numara.Length==5 && p.Bölüm!="" && p.Bölüm.Length>=3 && p.Bölüm.Length <= 30)
+            {
+                return DalOgrenci.OgrenciEkle(p);
+
+            }
+            return -1;
+        }
     }
 }

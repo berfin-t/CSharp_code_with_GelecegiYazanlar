@@ -31,5 +31,16 @@ namespace Katmanli_Mimari
             en.OgrenciID = deger;
             BLOgrenci.OgrenciSilBL(en.OgrenciID);
         }
+
+        private void BtnGuncelle_Click(object sender, EventArgs e)
+        {
+            EntityOgrenci ent= new EntityOgrenci();
+            ent.Ad=TxtAd.Text;
+            ent.Soyad=TxtSoyad.Text;
+            ent.Bölüm=TxtBolum.Text;
+            ent.Numara=MTxtNumara.Text;
+            ent.OgrenciID = int.Parse(TxtId.Text);
+            BLOgrenci.OgrenciGuncelleBL(ent);
+        }
     }
 }
