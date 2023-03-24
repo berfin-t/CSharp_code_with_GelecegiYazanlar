@@ -1,0 +1,11 @@
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\bin\Debug\Sezar_Sifreleme.exe.config
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\bin\Debug\Sezar_Sifreleme.exe
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\bin\Debug\Sezar_Sifreleme.pdb
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.csproj.AssemblyReference.cache
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.csproj.SuggestedBindingRedirects.cache
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.Form1.resources
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.Properties.Resources.resources
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.csproj.GenerateResource.cache
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.csproj.CoreCompileInputs.cache
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.exe
+D:\github\C#_code_with_GelecegiYazanlar\Sezar_Sifreleme\Sezar_Sifreleme\obj\Debug\Sezar_Sifreleme.pdb
