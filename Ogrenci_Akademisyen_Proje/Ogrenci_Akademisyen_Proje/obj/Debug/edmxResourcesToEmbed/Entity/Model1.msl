@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OgrenciSinavModelStoreContainer" CdmEntityContainer="OgrenciSinavEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblAkademisyenler">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.TblAkademisyenler">
+        <MappingFragment StoreEntitySet="TblAkademisyenler">
+          <ScalarProperty Name="AkademisyenID" ColumnName="AkademisyenID" />
+          <ScalarProperty Name="AkademisyenAd" ColumnName="AkademisyenAd" />
+          <ScalarProperty Name="AkademisyenSoyad" ColumnName="AkademisyenSoyad" />
+          <ScalarProperty Name="Unvan" ColumnName="Unvan" />
+          <ScalarProperty Name="AkademisyenNumara" ColumnName="AkademisyenNumara" />
+          <ScalarProperty Name="AkademisyenSifre" ColumnName="AkademisyenSifre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblBolum">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.TblBolum">
+        <MappingFragment StoreEntitySet="TblBolum">
+          <ScalarProperty Name="BolumID" ColumnName="BolumID" />
+          <ScalarProperty Name="BolumAd" ColumnName="BolumAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblDersler">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.TblDersler">
+        <MappingFragment StoreEntitySet="TblDersler">
+          <ScalarProperty Name="DersID" ColumnName="DersID" />
+          <ScalarProperty Name="DersAd" ColumnName="DersAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblNotlar">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.TblNotlar">
+        <MappingFragment StoreEntitySet="TblNotlar">
+          <ScalarProperty Name="NotID" ColumnName="NotID" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+          <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+          <ScalarProperty Name="Proje" ColumnName="Proje" />
+          <ScalarProperty Name="Ders" ColumnName="Ders" />
+          <ScalarProperty Name="Ogrenci" ColumnName="Ogrenci" />
+          <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TblOgrenciler">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.TblOgrenciler">
+        <MappingFragment StoreEntitySet="TblOgrenciler">
+          <ScalarProperty Name="OgrID" ColumnName="OgrID" />
+          <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+          <ScalarProperty Name="OgrSoyad" ColumnName="OgrSoyad" />
+          <ScalarProperty Name="OgrNumara" ColumnName="OgrNumara" />
+          <ScalarProperty Name="OgrSifre" ColumnName="OgrSifre" />
+          <ScalarProperty Name="OgrMail" ColumnName="OgrMail" />
+          <ScalarProperty Name="OgrResim" ColumnName="OgrResim" />
+          <ScalarProperty Name="OgrBolum" ColumnName="OgrBolum" />
+          <ScalarProperty Name="OgrDurum" ColumnName="OgrDurum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Notlar" FunctionName="OgrenciSinavModel.Store.Notlar">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OgrenciSinavModel.Notlar_Result">
+          <ScalarProperty Name="NOt_ID" ColumnName="NOt_ID" />
+          <ScalarProperty Name="Ders_Adı" ColumnName="Ders Adı" />
+          <ScalarProperty Name="Öğrenci" ColumnName="Öğrenci" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+          <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="View_1">
+      <EntityTypeMapping TypeName="OgrenciSinavModel.View_1">
+        <MappingFragment StoreEntitySet="View_1">
+          <ScalarProperty Name="Ortalama" ColumnName="Ortalama" />
+          <ScalarProperty Name="Proje" ColumnName="Proje" />
+          <ScalarProperty Name="Quiz2" ColumnName="Quiz2" />
+          <ScalarProperty Name="Quiz1" ColumnName="Quiz1" />
+          <ScalarProperty Name="Sinav3" ColumnName="Sinav3" />
+          <ScalarProperty Name="Sinav2" ColumnName="Sinav2" />
+          <ScalarProperty Name="Sinav1" ColumnName="Sinav1" />
+          <ScalarProperty Name="DersAd" ColumnName="DersAd" />
+          <ScalarProperty Name="OgrSoyad" ColumnName="OgrSoyad" />
+          <ScalarProperty Name="OgrAd" ColumnName="OgrAd" />
+          <ScalarProperty Name="NotID" ColumnName="NotID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="OgrenciSinavModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="OgrenciSinavModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="OgrenciSinavModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="OgrenciSinavModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OgrenciSinavModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="OgrenciSinavModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OgrenciSinavModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="OgrenciSinavModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="OgrenciSinavModel.Store.sp_upgraddiagrams" />
+  </EntityContainerMapping>
+</Mapping>

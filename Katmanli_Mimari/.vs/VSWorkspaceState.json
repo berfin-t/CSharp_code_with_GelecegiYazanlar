@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\DataAccessLayer"
+    "\\DataAccessLayer",
+    "\\EntityLayer"
   ],
-  "SelectedNode": "\\DataAccessLayer\\Baglanti.cs",
+  "SelectedNode": "\\Katmanli_Mimari.sln",
   "PreviewInSolutionExplorer": false
 }

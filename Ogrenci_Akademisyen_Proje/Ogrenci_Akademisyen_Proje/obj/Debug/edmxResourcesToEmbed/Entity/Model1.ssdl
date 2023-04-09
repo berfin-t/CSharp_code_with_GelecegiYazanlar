@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OgrenciSinavModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TblAkademisyenler">
+    <Key>
+      <PropertyRef Name="AkademisyenID" />
+    </Key>
+    <Property Name="AkademisyenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AkademisyenAd" Type="nvarchar" MaxLength="30" />
+    <Property Name="AkademisyenSoyad" Type="nvarchar" MaxLength="30" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="20" />
+    <Property Name="AkademisyenNumara" Type="char" MaxLength="5" />
+    <Property Name="AkademisyenSifre" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="TblBolum">
+    <Key>
+      <PropertyRef Name="BolumID" />
+    </Key>
+    <Property Name="BolumID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BolumAd" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="TblDersler">
+    <Key>
+      <PropertyRef Name="DersID" />
+    </Key>
+    <Property Name="DersID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DersAd" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TblNotlar">
+    <Key>
+      <PropertyRef Name="NotID" />
+    </Key>
+    <Property Name="NotID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sinav1" Type="int" />
+    <Property Name="Sinav2" Type="int" />
+    <Property Name="Sinav3" Type="int" />
+    <Property Name="Quiz1" Type="int" />
+    <Property Name="Quiz2" Type="int" />
+    <Property Name="Proje" Type="int" />
+    <Property Name="Ders" Type="int" />
+    <Property Name="Ogrenci" Type="int" />
+    <Property Name="Ortalama" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <EntityType Name="TblOgrenciler">
+    <Key>
+      <PropertyRef Name="OgrID" />
+    </Key>
+    <Property Name="OgrID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OgrAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="OgrSoyad" Type="nvarchar" MaxLength="25" />
+    <Property Name="OgrNumara" Type="char" MaxLength="5" />
+    <Property Name="OgrSifre" Type="nchar" MaxLength="10" />
+    <Property Name="OgrMail" Type="nvarchar" MaxLength="50" />
+    <Property Name="OgrResim" Type="nvarchar" MaxLength="100" />
+    <Property Name="OgrBolum" Type="int" />
+    <Property Name="OgrDurum" Type="bit" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'OgrenciSinav.dbo.View_1' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="View_1">
+    <Key>
+      <PropertyRef Name="NotID" />
+    </Key>
+    <Property Name="NotID" Type="int" Nullable="false" />
+    <Property Name="OgrAd" Type="nvarchar" MaxLength="20" />
+    <Property Name="OgrSoyad" Type="nvarchar" MaxLength="25" />
+    <Property Name="DersAd" Type="nvarchar" MaxLength="50" />
+    <Property Name="Sinav1" Type="tinyint" />
+    <Property Name="Sinav2" Type="tinyint" />
+    <Property Name="Sinav3" Type="tinyint" />
+    <Property Name="Quiz1" Type="tinyint" />
+    <Property Name="Quiz2" Type="tinyint" />
+    <Property Name="Proje" Type="tinyint" />
+    <Property Name="Ortalama" Type="decimal" Precision="5" Scale="2" />
+  </EntityType>
+  <Association Name="FK_TblNotlar_TblDersler">
+    <End Role="TblDersler" Type="Self.TblDersler" Multiplicity="0..1" />
+    <End Role="TblNotlar" Type="Self.TblNotlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblDersler">
+        <PropertyRef Name="DersID" />
+      </Principal>
+      <Dependent Role="TblNotlar">
+        <PropertyRef Name="Ders" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblNotlar_TblOgrenciler">
+    <End Role="TblOgrenciler" Type="Self.TblOgrenciler" Multiplicity="0..1" />
+    <End Role="TblNotlar" Type="Self.TblNotlar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblOgrenciler">
+        <PropertyRef Name="OgrID" />
+      </Principal>
+      <Dependent Role="TblNotlar">
+        <PropertyRef Name="Ogrenci" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TblOgrenciler_TblBolum2">
+    <End Role="TblBolum" Type="Self.TblBolum" Multiplicity="0..1" />
+    <End Role="TblOgrenciler" Type="Self.TblOgrenciler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblBolum">
+        <PropertyRef Name="BolumID" />
+      </Principal>
+      <Dependent Role="TblOgrenciler">
+        <PropertyRef Name="OgrBolum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="Notlar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="OgrenciSinavModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAkademisyenler" EntityType="Self.TblAkademisyenler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblBolum" EntityType="Self.TblBolum" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblDersler" EntityType="Self.TblDersler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblNotlar" EntityType="Self.TblNotlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblOgrenciler" EntityType="Self.TblOgrenciler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="View_1" EntityType="Self.View_1" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [View_1].[NotID] AS [NotID], 
+    [View_1].[OgrAd] AS [OgrAd], 
+    [View_1].[OgrSoyad] AS [OgrSoyad], 
+    [View_1].[DersAd] AS [DersAd], 
+    [View_1].[Sinav1] AS [Sinav1], 
+    [View_1].[Sinav2] AS [Sinav2], 
+    [View_1].[Sinav3] AS [Sinav3], 
+    [View_1].[Quiz1] AS [Quiz1], 
+    [View_1].[Quiz2] AS [Quiz2], 
+    [View_1].[Proje] AS [Proje], 
+    [View_1].[Ortalama] AS [Ortalama]
+    FROM [dbo].[View_1] AS [View_1]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_TblNotlar_TblDersler" Association="Self.FK_TblNotlar_TblDersler">
+      <End Role="TblDersler" EntitySet="TblDersler" />
+      <End Role="TblNotlar" EntitySet="TblNotlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblNotlar_TblOgrenciler" Association="Self.FK_TblNotlar_TblOgrenciler">
+      <End Role="TblOgrenciler" EntitySet="TblOgrenciler" />
+      <End Role="TblNotlar" EntitySet="TblNotlar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TblOgrenciler_TblBolum2" Association="Self.FK_TblOgrenciler_TblBolum2">
+      <End Role="TblBolum" EntitySet="TblBolum" />
+      <End Role="TblOgrenciler" EntitySet="TblOgrenciler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
